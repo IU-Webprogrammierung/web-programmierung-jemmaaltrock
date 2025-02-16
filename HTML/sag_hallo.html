@@ -8,7 +8,7 @@
 
 <body>
     <header>
-    <nav class="menu">
+    <nav class="menu" aria-label="Hauptnavigation">
         <p>SAG HALLO</p>
         <ul>
             <li><a href="index.html">JA</a></li>
@@ -19,18 +19,27 @@
     </nav>
 </header>
 <main>
-<img src="Bilder/Image 6.png" alt="Bild Schatten von Monstera auf Wand sw" role="presentation">
+<img src="Bilder/Image 6.png" alt="Schattenspiel einer Monstera-Pflanze auf einer Wand" role="presentation">
 
     <form>
         <label for="vorname">
             Vorname
-            <input name="vorname" id="vorname" maxlength="30">
+            <input name="vorname" id="vorname" maxlength="30" required aria-required="true">
           </label>
+          <span id="error-vorname" class="error-message" aria-live="polite" style="display: none; color: red;">
+            Bitte Vorname eingeben.
+        </span>
 
         <label for="nachname">Nachname
-        <input name="nachname" id="nachname" maxlength="40">
+        <input name="nachname" id="nachname" maxlength="40" required aria-required="true">
+        <span id="error-nachname" class="error-message" aria-live="polite" style="display: none; color: red;">
+            Bitte Nachname eingeben.
+        </span>
         <label for="nachricht">Deine Nachricht</label>
         <textarea id="nachricht" name="nachricht"></textarea>
+        <span id="error-nachricht" class="error-message" aria-live="polite" style="display: none; color: red;">
+            Bitte eine Nachricht eingeben.
+        </span>
 
         <button type="submit">Eingaben absenden</button>
 
