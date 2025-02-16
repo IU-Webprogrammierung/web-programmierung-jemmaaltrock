@@ -7,14 +7,20 @@
 </head>
 
 <body>
-    <header>
-    <nav class="menu" aria-label="Hauptnavigation">
-        <p>SAG HALLO</p>
-        <ul>
+ <header>
+    <nav class="navbar" aria-label="Hauptnavigation">
+        <div class="Logo">SAG HALLO</div>
+      <div class="burger" id="burger"> 
+      <!-- Das Burger-Icon-->
+       <span></span>
+       <span></span>
+       <span></span>
+    </div> 
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">JA</a></li>
-            <li><a href="das_bin_ich.html">Das bin ich!</a></li>
-            <li><a href="meine_arbeit.html">Meine Arbeit!</a></li>
-            <li><a href="sag_hallo.html" aria-current="page">Sag Hallo!</a></li>
+            <li><a href="das_bin_ich.html">das bin ich!</a></li>
+            <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
+            <li><a href="sag_hallo.html" aria-current="page">sag Hallo!</a></li>
         </ul>
     </nav>
 </header>
@@ -35,6 +41,11 @@
         <span id="error-nachname" class="error-message" aria-live="polite" style="display: none; color: red;">
             Bitte Nachname eingeben.
         </span>
+        <label for="e-mail">E-Mail
+            <input name="e-mail" id="e-mail" maxlength="40" required aria-required="true">
+            <span id="error-e-mail" class="error-message" aria-live="polite" style="display: none; color: red;">
+                Bitte E-Mail eingeben.
+            </span>
         <label for="nachricht">Deine Nachricht</label>
         <textarea id="nachricht" name="nachricht"></textarea>
         <span id="error-nachricht" class="error-message" aria-live="polite" style="display: none; color: red;">
@@ -47,7 +58,8 @@
 </main>
     <footer>
         <h2>Jemma Altrock</h2>
-        <p> | <a href="#">LinkedIn</a> | <a href="#">Xing</a> | <a href="#">Kontakt</a> | <a href="#">Impressum</a> | <a href="#">Datenschutz</a> </p>
+        <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a href="https://www.xing.com/profile/Jemma_Altrock2/web_profiles?expandNeffi=true">Xing</a> | <a href="sag_hallo.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
+            href="datenschutz.html">Datenschutz</a> </p>
     </footer>
 </body>
 
