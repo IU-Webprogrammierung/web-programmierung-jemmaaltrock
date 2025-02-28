@@ -9,4 +9,4 @@
     </p>
     <h2>Verwendung von</h2>
     <p> HTML</p>
-    <p>Jemma Altrock<br>Matrikelnummer:92101199</p>
+    <p>Jemma Altrock</p>
