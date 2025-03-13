@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/* Allgemeine Stile */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    background-color: #ffffff;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Typografie */
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-size: 15rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    height: 60px;
+    background: none;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+/* Logo linksbündig */
+.Logo {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-left: 0;
+}
+
+/* Hamburger-Menü rechtsbündig */
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+    margin-right: 0;
+    padding-right: 10px;
+    z-index: 10;
+}
+
+.burger span {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    background: black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Checkbox verstecken */
+#menu-toggle {
+    display: none;
+}
+
+/* Navigationsmenü */
+.nav-links {
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    width: 90%;
+    background: white;
+    padding: 1rem 0;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    z-index: 9;
+}
+
+.nav-links li {
+    padding: 0.5rem 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Menü anzeigen, wenn Checkbox aktiv ist */
+#menu-toggle:checked + .burger + .nav-links {
+    display: flex;
+}
+
+/* Animation für das Hamburger-Icon */
+#menu-toggle:checked + .burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#menu-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Hintergrundbild */
+header {
+    width: 100%;
+    height: 80%;
+    background: url("HTML/Bilder/Home.png") no-repeat center center/cover;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Bild für Screenreader sichtbar, aber nicht für das Design */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+main h2{
+    color: white;
+    display: fixed;
+    flex-direction: column;
+    align-items: fixed-end; /* Rechtsbündig */
+    justify-content: fixed-end; /* Nach unten ausrichten */
+    padding-right: 1rem; /* Abstand vom rechten Rand */
+}
+/* Footer */
+footer {
+        background: white;
+        padding: 1rem 3rem;
+        display: flex;
+        flex-direction: column; /* Elemente untereinander anordnen */
+        align-items: flex-end;
+        font-size: 12px;
+        position: relative;
+}
+
+footer h3 {
+    color: grey;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h3 span {
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem;
+}

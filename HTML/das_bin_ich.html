@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/das_bin_ich.css">
     <title>Ja das bin ich</title>
 </head>
 
@@ -12,46 +13,52 @@
 
         <nav class="navbar" aria-label="Hauptnavigation">
             <div class="Logo">DAS BIN ICH</div>
-            <div class="burger" id="burger">
-                <!-- Das Burger-Icon-->
+    
+            <!-- Checkbox als Toggle für das Menü -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">JA</a></li>
+            </label>
+    
+            <!-- Navigationslinks -->
+            <ul class="nav-links">
+                <li><a href="../index.html">JA</a></li>
                 <li><a href="das_bin_ich.html" aria-current="page">das bin ich!</a></li>
                 <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
                 <li><a href="sag_hallo.html">sag Hallo!</a></li>
             </ul>
         </nav>
 
-        <h2>JA das bin ich</h2>
+        <h1>JA das bin ich</h1>
     </header>
     <main>
-        <hr>
-        <section>
-            <img src="Bilder/IMG_5786 1.png"
-                alt="Portrait von Jemma Altrock, die lächelnd in die Kamera schaut. Sie trägt einen dunklen Pullover und Jeans und steht vor einer hellen Wand mit einer minimalistischen Grafik auf der rechten Seite."
-                role="presentation">
-        </section>
-        <section>
+        <section class="text">
             <h3>HI</h3>
             <p>ich bin Jemma Altrock, Mediengestalterin und angehende UX-Designerin. Was mich antreibt, ist die
                 Möglichkeit, durch kreatives Design und nutzerzentrierte Ansätze, positive und intuitive
                 Nutzererlebnisse zu schaffen. Meine Reise begann mit einer Ausbildung zur Mediengestalterin und führte
                 mich zu einem Studium im UX-Design, wo ich meine Fähigkeiten weiter ausbaue und vertiefe.
             </p>
+
         </section>
 
-        <section>
-            <hr>
+        <section class="media">
+            <img src="Bilder/IMG_5786 1.png"
+                alt="Portrait von Jemma Altrock, die lächelnd in die Kamera schaut. Sie trägt einen dunklen Pullover und Jeans und steht vor einer hellen Wand mit einer minimalistischen Grafik auf der rechten Seite."
+                role="presentation">
+        </section>
+    
+
+        <section class="media">
+            
             <img src="Bilder/Image 4.png"
                 alt="Abstrakte Schattenform auf einer glatten Oberfläche, weich verlaufende Konturen, die an organische Formen erinnern."
                 role="presentation">
 
             <h3>PLOT</h3>
-            <ul>
+            <ul class="media">
                 <li>Mediengestaltung: Meine berufliche Laufbahn begann mit einer Ausbildung zur Mediengestalterin
                     Digital
                     und Print, wo ich fundierte Kenntnisse in der Adobe Creative Suite und in der Gestaltung von Print-
@@ -71,13 +78,13 @@
         </section>
 
         <section>
-            <hr>
-            <h2>Mein Weg war nicht immer gradlinig, aber gerade diese Vielfalt an Erfahrungen hat mich zu der
-                vielseitigen und einfühlsamen Designerin gemacht, die ich heute bin.</h2>
-            <hr>
+            
+            <h1>Mein Weg war nicht immer gradlinig, aber gerade diese Vielfalt an Erfahrungen hat mich zu der
+                vielseitigen und einfühlsamen Designerin gemacht, die ich heute bin.</h1>
+            
         </section>
 
-        <section>
+        <section class="media">
             <img src="Bilder/Group01.png"
                 alt="Zweiteiliges Bild: Links abstrakte Lichtstreifen in Bewegung auf schwarzem Hintergrund, erzeugen einen dynamischen, künstlerischen Effekt. Rechts eine Jemma Altrock in warmer Kleidung und Mütze, die lächelnd auf einem Holzsteg in einem bewaldeten Gebiet läuft, umgeben von Bäumen und Natur.“"
                 role="presentation">
@@ -113,7 +120,7 @@
             role="presentation">
 
         <section>
-            <hr>
+            
             <img src="Bilder/Image 6.png"
                 alt="Abstrakte Schattenform auf einer glatten Oberfläche, weich verlaufende Konturen, die an organische Formen erinnern."
                 role="presentation">
@@ -150,9 +157,11 @@
     </main>
 
     <footer>
-        <h2>Jemma Altrock</h2>
-        <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a href="https://www.xing.com/profile/Jemma_Altrock2/web_profiles?expandNeffi=true">Xing</a> | <a href="sag_hallo.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
-            href="datenschutz.html">Datenschutz</a> </p>
+        <h3><span>J</span>emma <span>A</span>ltrock</h3>
+        <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a
+                href="https://www.xing.com/profile/Jemma_Altrock2/web_profiles?expandNeffi=true">Xing</a> | <a
+                href="sag_hallo.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
+                href="datenschutz.html">Datenschutz</a> </p>
     </footer>
 </body>
 
