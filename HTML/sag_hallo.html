@@ -4,62 +4,74 @@
 <head>
     <meta charset="UTF-8" />
     <title>sag hallo</title>
+    <link rel="stylesheet" href="../css/sag_hallo.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar" aria-label="Hauptnavigation">
             <div class="Logo">SAG HALLO</div>
-            <div class="burger" id="burger">
-                <!-- Das Burger-Icon-->
+
+            <!-- Checkbox als Toggle für das Menü -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
+            </label>
+
+            <!-- Navigationslinks -->
+            <ul class="nav-links">
                 <li><a href="../index.html">JA</a></li>
                 <li><a href="das_bin_ich.html">das bin ich!</a></li>
                 <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
                 <li><a href="sag_hallo.html" aria-current="page">sag Hallo!</a></li>
             </ul>
         </nav>
+        <h1>JA Sag Hallo!</h1>
     </header>
-    <main>
-        <img src="Bilder/Image 6.png" alt="Schattenspiel einer Monstera-Pflanze auf einer Wand" role="presentation">
+    <div class="container">
+        <main>
+            <img class="full-width" src="Bilder/Image 6.png" alt="Schattenspiel einer Monstera-Pflanze auf einer Wand" role="presentation">
+            <div class="formular">
+                <p class="bold">gemeinsam wird's episch!</p>
+                <p>Dann lass uns loslegen – ich freu mich auf deine Nachricht.</p>
+                <form>
+                    <label for="vorname">
+                        Vorname
+                        <input name="vorname" id="vorname" maxlength="30" required aria-required="true">
+                    </label>
+                    <span id="error-vorname" class="error-message" aria-live="polite"
+                        style="display: none; color: red;">
+                        Bitte Vorname eingeben.
+                    </span>
 
-        <h2>gemeinsam wird's episch!</h2>
-        <p>Dann lass uns loslegen – ich freu mich auf deine Nachricht.</p>
-        <form>
-            <label for="vorname">
-                Vorname
-                <input name="vorname" id="vorname" maxlength="30" required aria-required="true">
-            </label>
-            <span id="error-vorname" class="error-message" aria-live="polite" style="display: none; color: red;">
-                Bitte Vorname eingeben.
-            </span>
+                    <label for="nachname">Nachname
+                        <input name="nachname" id="nachname" maxlength="40" required aria-required="true">
+                    </label>
+                    <span id="error-nachname" class="error-message" aria-live="polite"
+                        style="display: none; color: red;">
+                        Bitte Nachname eingeben.
+                    </span>
+                    <label for="e-mail">E-Mail
+                        <input name="e-mail" id="e-mail" maxlength="40" required aria-required="true">
+                    </label>
+                    <span id="error-e-mail" class="error-message" aria-live="polite" style="display: none; color: red;">
+                        Bitte E-Mail eingeben.
+                    </span>
+                    <label for="nachricht">Deine Nachricht</label>
+                    <textarea id="nachricht" name="nachricht"></textarea>
+                    <span id="error-nachricht" class="error-message" aria-live="polite"
+                        style="display: none; color: red;">
+                        Bitte eine Nachricht eingeben.
+                    </span>
 
-            <label for="nachname">Nachname
-                <input name="nachname" id="nachname" maxlength="40" required aria-required="true">
-            </label>
-            <span id="error-nachname" class="error-message" aria-live="polite" style="display: none; color: red;">
-                Bitte Nachname eingeben.
-            </span>
-            <label for="e-mail">E-Mail
-                <input name="e-mail" id="e-mail" maxlength="40" required aria-required="true">
-            </label>
-            <span id="error-e-mail" class="error-message" aria-live="polite" style="display: none; color: red;">
-                Bitte E-Mail eingeben.
-            </span>
-            <label for="nachricht">Deine Nachricht</label>
-            <textarea id="nachricht" name="nachricht"></textarea>
-            <span id="error-nachricht" class="error-message" aria-live="polite" style="display: none; color: red;">
-                Bitte eine Nachricht eingeben.
-            </span>
+                    <button type="submit">Eingaben absenden</button>
 
-            <button type="submit">Eingaben absenden</button>
-
-        </form>
-    </main>
+                </form>
+            </div>
+        </main>
+    </div>
     <footer>
         <h3><span>J</span>emma <span>A</span>ltrock</h3>
         <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a
