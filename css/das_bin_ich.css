@@ -3,36 +3,39 @@
 /* Allgemeine Stile */
 body,
 html {
-    margin: 0;
-    padding: 0;
     font-family: Inter, sans-serif;
     background-color: #ffffff;
     height: 100%;
     overflow-x: hidden;
-    box-sizing: border-box;
+    display: flexbox;
 }
 
 /* Typografie */
 h1 {
     font-size: 5rem;
     font-weight: bold;
-    text-transform: uppercase; /* Alles in Großbuchstaben */
+    text-transform: uppercase;
+    /* Alles in Großbuchstaben */
     text-align: center;
 }
 
 h2 {
     font-size: 15rem;
     font-weight: bold;
-    text-transform: uppercase; /* Alles in Großbuchstaben */
+    text-transform: uppercase;
+    /* Alles in Großbuchstaben */
     position: absolute;
-    bottom: 1rem; /* Etwas Abstand zum Footer */
-    right: 2rem; /* Abstand vom rechten Rand */
+    bottom: 1rem;
+    /* Etwas Abstand zum Footer */
+    right: 2rem;
+    /* Abstand vom rechten Rand */
 }
 
 h3 {
     font-size: 2rem;
     font-weight: normal;
-    text-transform: uppercase; /* Alles in Großbuchstaben */
+    text-transform: uppercase;
+    /* Alles in Großbuchstaben */
 }
 
 /* Allgemeine Stile für die Navbar */
@@ -140,71 +143,120 @@ h3 {
 }
 
 /* Menü anzeigen, wenn Checkbox aktiv ist */
-#menu-toggle:checked + .burger + .nav-links {
+#menu-toggle:checked+.burger+.nav-links {
     display: flex;
 }
 
 /* Animation für das Hamburger-Icon */
-#menu-toggle:checked + .burger span:nth-child(1) {
+#menu-toggle:checked+.burger span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
-#menu-toggle:checked + .burger span:nth-child(2) {
+
+#menu-toggle:checked+.burger span:nth-child(2) {
     opacity: 0;
 }
-#menu-toggle:checked + .burger span:nth-child(3) {
+
+#menu-toggle:checked+.burger span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Hauptbereich */
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Zweispaltiges Layout */
-    gap: 2rem;
-    width: 100%;
-    padding: 5rem 2rem 2rem; /* Abstand zum fixierten Header */
-    box-sizing: border-box;
-    grid-template-columns: 50% 50%
+.container {
+    max-width: 100vw; /* Begrenzung auf 1024px */
+    width: 100%; /* Volle Breite bis zur max-width */
+    margin: 0 auto; /* Zentriert das Grid */
+    padding: 0 2rem; /* Sicherheitsabstand links & rechts */
+    box-sizing: border-box; /* Padding beeinflusst nicht die max-width */
+    overflow: hidden;
+    position: relative;
 }
 
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 gleich große Spalten */
+    gap: 2rem;
+    max-width: auto; /* Begrenzung auf 1024px */
+    width: 100%; /* Flexible Anpassung */
+    margin: 0 auto; /* Zentriert den Inhalt */
+    box-sizing: border-box;
+    overflow: hidden; /* Falls ein Element herausragt, wird es abgeschnitten */
+}
+
+
 /* Inhalte */
+
 .text {
-    width: 100%;
+    grid-template-columns: auto;
     max-width: 50rem;
     padding: 2rem;
 }
 
+.text-grey {
+    grid-template-columns: auto;
+    max-width: 50rem;
+    padding: 2rem;
+    background-color: #808080;
+    color: #ffffff;
+}
+
 img {
-    max-width: 100%;
     height: auto;
     display: block;
     position: relative;
 }
 
+ul.media{
+    padding: 0;
+}
 
+img.full-width {
+    width: calc(100% + 4rem);
+    /* 4rem extra, damit es über den Spaltenrand hinausgeht */
+    max-width: none;
+    margin-left: -2rem;
+    /* Negativer Margin, um das Bild über den Rand hinaus zu verschieben */
+    margin-right: -2rem;
+}
+
+h1.zitat {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem 0;
+    /* Abstand nach oben und unten */
+    position: relative;
+}
+
+.media-full {
+    grid-column: 1/-1;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
 
 /* Footer */
 footer {
     background: white;
     padding: 1rem 3rem;
     display: flex;
-    flex-direction: column; /* Elemente untereinander anordnen */
+    flex-direction: column;
+    /* Elemente untereinander anordnen */
     align-items: flex-end;
     font-size: 12px;
     position: relative;
 }
 
 footer h3 {
-color: grey;
-text-transform: uppercase;
-font-weight: normal;
+    color: grey;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 h3 span {
-font-weight: bold;
+    font-weight: bold;
 }
 
 footer a {
-text-decoration: none;
-color: black;
-margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem;
 }
