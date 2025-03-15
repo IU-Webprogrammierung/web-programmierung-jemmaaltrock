@@ -4,10 +4,10 @@
 body,
 html {
     font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #ffffff;
-    height: 100%;
-    overflow-x: hidden;
-    display: flexbox;
+    text-align: center;
 }
 
 /* Typografie */
@@ -160,118 +160,99 @@ h3 {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-
-/* Slider Auswahl */
-fieldset {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 1rem;
-    border-radius: 5px;
-    background: white;
-    width: 80%;
-}
-
-label {
-    margin: 0 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Artikel */
-article {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-article img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-article h2, article h3 {
-    color: #444;
-}
-
-article p, article ul {
-    line-height: 1.6;
-}
-
-/* Links */
-a {
-    color: black;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Allgemeine Stile */
+/* Slider-Stile */
 .slider-container {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+    position: relative;
+    width: 80vw;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: calc(100% * 7);
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 80vw;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background: white;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.slide-text {
+    background: white;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
 .slider-nav {
-    margin-bottom: 10px;
-}
-
-.slider-nav a {
-    text-decoration: none;
-    padding: 10px;
-    background: #ddd;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.slider-nav a:hover {
-    background: #bbb;
-}
-
-/* Slider Bereich */
-.slides {
     display: flex;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Einzelne Slides */
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 24px;
-    background: lightgray;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-/* Sichtbarkeit steuern */
-#slide1:target, 
-#slide2:target, 
-#slide3:target {
-    display: flex;
+    margin-top: 10px;
 }
 
-article {
-    background-color: white;
-    position: relative;    
-    animation: slideranimation;
+.slider-nav label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: gray;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
+input[name="slider"]:checked+.slider-nav label {
+    background: black;
+}
+
+#slide1:checked~.slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked~.slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.slides {
+    transform: translateX(-200%);
+}
+
+#slide4:checked~.slides {
+    transform: translateX(-300%);
+}
+
+#slide5:checked~.slides {
+    transform: translateX(-400%);
+}
+
+#slide6:checked~.slides {
+    transform: translateX(-500%);
+}
+
+#slide7:checked~.slides {
+    transform: translateX(-600%);
+}
 
 /* Footer */
 footer {
