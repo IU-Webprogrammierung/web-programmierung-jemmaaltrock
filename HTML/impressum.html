@@ -4,47 +4,52 @@
 <head>
     <meta charset="UTF-8" />
     <title>Impressum</title>
+    <link rel="stylesheet" href="../stylesheet.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar" aria-label="Hauptnavigation">
             <div class="Logo">IMPRESSUM</div>
-            <div class="burger" id="burger">
-                <!-- Das Burger-Icon-->
+
+            <!-- Checkbox als Toggle für das Menü -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.htmll">JA</a></li>
-                <li><a href="das_bin_ich.html">das bin ich!</a></li>
+            </label>
+
+            <!-- Navigationslinks -->
+            <ul class="nav-links">
+                <li><a href="../index.html">JA</a></li>
+                <li><a href="das_bin_ich.html" aria-current="page">das bin ich!</a></li>
                 <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
                 <li><a href="sag_hallo.html">sag Hallo!</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Impressum</h1>
+        <p>Impressum</p>
 
         <p>Angaben gemäß § 5 TMG:</p>
         <p>Jemma Altrock</p>
         <p> Westerwaldstraße 2, 46117 Oberhausen</p>
         <p> E-Mail <a href="jemma.altrock@gmx.de">jemma.altrock@gmx.de</a></p>
 
-        <h2>Kontakt</h2>
+        <p>Kontakt</p>
         <p>
             E-Mail: <a href="mailto:jemma.altrock@gmx.de">jemma.altrock@gmx.de</a>
         </p>
 
-        <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</p>
         <p>
             Jemma Altrock
             Westerwaldstraße 2
             46117 Oberhausen
         </p>
 
-        <h2>Haftung für Inhalte</h2>
+        <p>Haftung für Inhalte</p>
         <p>
             Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
             Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
@@ -58,7 +63,7 @@
             Inhalte umgehend entfernen.
         </p>
 
-        <h2>Haftung für Links</h2>
+        <p>Haftung für Links</p>
         <p>
             Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
             Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
@@ -72,7 +77,7 @@
             umgehend entfernen.
         </p>
 
-        <h2>Urheberrecht</h2>
+        <p>Urheberrecht</p>
         <p>
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
             Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der

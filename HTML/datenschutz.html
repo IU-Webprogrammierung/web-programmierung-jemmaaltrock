@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <title>Datenschutz</title>
+    <link rel="stylesheet" href="../stylesheet.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar" aria-label="Hauptnavigation">
             <div class="Logo">DATENSCHUTZ</div>
-            <div class="burger" id="burger">
-                <!-- Das Burger-Icon-->
+
+            <!-- Checkbox als Toggle für das Menü -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
+            </label>
+
+            <!-- Navigationslinks -->
+            <ul class="nav-links">
                 <li><a href="../index.html">JA</a></li>
-                <li><a href="das_bin_ich.html">das bin ich!</a></li>
+                <li><a href="das_bin_ich.html" aria-current="page">das bin ich!</a></li>
                 <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
                 <li><a href="sag_hallo.html">sag Hallo!</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Datenschutzerklärung</h1>
+        <p>Datenschutzerklärung</p>
 
         <p>1. Allgemeine Hinweise</p>
         <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung informiert Sie darüber,

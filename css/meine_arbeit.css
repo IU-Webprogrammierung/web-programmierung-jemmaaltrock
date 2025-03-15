@@ -160,105 +160,119 @@ h3 {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hauptbereich */
-.container {
-    max-width: 100vw; 
-    width: 100%; /* Volle Breite bis zur max-width */
-    margin: 0 auto; /* Zentriert das Grid */
-    padding: 0 2rem; /* Sicherheitsabstand links & rechts */
-    box-sizing: border-box; /* Padding beeinflusst nicht die max-width */
+
+/* Slider Auswahl */
+fieldset {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    background: white;
+    width: 80%;
+}
+
+label {
+    margin: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Artikel */
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+article h2, article h3 {
+    color: #444;
+}
+
+article p, article ul {
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Allgemeine Stile */
+.slider-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Navigation */
+.slider-nav {
+    margin-bottom: 10px;
+}
+
+.slider-nav a {
+    text-decoration: none;
+    padding: 10px;
+    background: #ddd;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.slider-nav a:hover {
+    background: #bbb;
+}
+
+/* Slider Bereich */
+.slides {
+    display: flex;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 gleich große Spalten */
-    gap: 2rem;
-    max-width: auto; 
-    width: 100%; /* Flexible Anpassung */
-    margin: 0 auto; /* Zentriert den Inhalt */
-    box-sizing: border-box;
-    overflow: hidden; /* Falls ein Element herausragt, wird es abgeschnitten */
-}
-
-
-/* Inhalte */
-
-.text {
-    grid-template-columns: auto;
-    max-width: 50rem;
-    padding: 2rem;
-    -webkit-hyphens: auto; 
-	hyphens: auto; 
-}
-
-img.full-width {
-    width: calc(100% + 4rem);
-    /* 4rem extra, damit es über den Spaltenrand hinausgeht */
-    max-width: none;
-    margin-left: -2rem;
-    /* Negativer Margin, um das Bild über den Rand hinaus zu verschieben */
-    margin-right: -2rem;
-} 
-
-p.bold {
-    font-style: bold;
-    text-transform: uppercase;
-    font-size: 3rem;
-    margin: 0;
-}
-
-.formular {
-    grid-template-columns: auto;
-    max-width: 50rem;
-    padding: 2rem;
-    background-color: #808080;
-    color: #ffffff;
-}
-
-img {
-    height: auto;
-    display: block;
-    position: relative;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-}
-input, textarea {
+/* Einzelne Slides */
+.slide {
+    position: absolute;
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-}
-textarea {
-    height: 150px;
-}
-button {
-    background: none;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 5px;
-    color: #ffffff;
+    justify-content: center;
+    font-size: 24px;
+    background: lightgray;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-button::after {
-    content: "→";
+/* Sichtbarkeit steuern */
+#slide1:target, 
+#slide2:target, 
+#slide3:target {
+    display: flex;
 }
-.error-message {
-    color: red;
-    font-size: 12px;
-    display: none;
+
+article {
+    background-color: white;
+    position: relative;    
+    animation: slideranimation;
 }
+
+
 /* Footer */
 footer {
     background: white;

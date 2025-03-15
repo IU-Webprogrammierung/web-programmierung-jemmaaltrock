@@ -5,27 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meine Arbeit</title>
+    <link rel="stylesheet" href="../css/meine_arbeit.css">
 </head>
 
 <body>
     <header>
-    <nav class="navbar" aria-label="Hauptnavigation">
-        <div class="Logo">MEINE ARBEIT</div>
-        <div class="burger" id="burger">
-            <!-- Das Burger-Icon-->
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">JA</a></li>
-            <li><a href="das_bin_ich.html">das bin ich!</a></li>
-            <li><a href="meine_arbeit.html" aria-current="page">meine Arbeit!</a></li>
-            <li><a href="sag_hallo.html">sag Hallo!</a></li>
-        </ul>
-    </nav>
-   
-        <h2>JA meine Arbeit</h2>
+        <nav class="navbar" aria-label="Hauptnavigation">
+            <div class="Logo">MEINE ARBEIT</div>
+
+            <!-- Checkbox als Toggle für das Menü -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navigationslinks -->
+            <ul class="nav-links">
+                <li><a href="../index.html">JA</a></li>
+                <li><a href="das_bin_ich.html">das bin ich!</a></li>
+                <li><a href="meine_arbeit.html" aria-current="page">meine Arbeit!</a></li>
+                <li><a href="sag_hallo.html">sag Hallo!</a></li>
+            </ul>
+        </nav>
+
+        <h1>JA meine Arbeit</h1>
     </header>
 
     <main>
@@ -55,12 +60,12 @@
         </fieldset>
 
         <!-- Slider Inhalte -->
-        <div>
+        <div class="slider">
             <!-- Erster Slide -->
-            <article>
+            <article class="slide1">
                 <img src="Bilder/Slide-Bilder/Rectangle 17.png" alt="Logo, nada, Unverpacktladen" width="625"
                     role="presentation">
-                <h2>PROJEKTARBEIT Konzeption Unverpacktladen</h2>
+                <h1>PROJEKTARBEIT Konzeption Unverpacktladen</h1>
                 <p>Konzept und Design für einen neuen Unverpacktladen namens "nada." in Essen, der auf
                     nachhaltiges
                     Einkaufen ohne Verpackungsmüll abzielt.</p>
@@ -70,10 +75,10 @@
                     Einkaufsalternative
                     zu schaffen, bei der Kunden mit eigenen Behältern genau die Menge an Lebensmitteln kaufen,
                     die
-                    sie benötigen – ohne Verpackungsmüll. 
+                    sie benötigen – ohne Verpackungsmüll.
 
-                    Schritte zur Umsetzung: 
-                    Vision und Idee: 
+                    Schritte zur Umsetzung:
+                    Vision und Idee:
 
                     Ein Zero-Waste-Geschäft für biologische, regionale und saisonale Produkte.
                     Förderung eines nachhaltigen Einkaufsverhaltens und Reduktion von Lebensmittelverschwendung.
@@ -106,9 +111,9 @@
             </article>
 
             <!-- Zweiter Slide -->
-            <article>
+            <article class="slide2">
                 <img src="Bilder/Slide-Bilder/Group 15.png" alt="Logo Optik Tack" width="625" role="presentation">
-                <h2>Projektarbeit Neukonzeption Optik Tack</h2>
+                <h1>Projektarbeit Neukonzeption Optik Tack</h1>
                 <p>in Konzept zur Neupositionierung und Markenentwicklung des Optikergeschäfts Optik Tack in
                     Aalen,
                     einschließlich Situationsanalysen, Zielgruppenanalysen und Corporate Design.
@@ -156,7 +161,7 @@
             </article>
 
             <!-- Dritter Slide -->
-            <article>
+            <article class="slide3">
                 <img src="Bilder/Slide-Bilder/Group 16.png" alt="Villa Italian - Screen einer Restaurant-Website"
                     width="625" role="presentation">
                 <h3>Projektarbeit: Website-Konzept für „Villa Italia“</h3>
@@ -221,7 +226,7 @@
             </article>
 
             <!-- Vierter Slide -->
-            <article>
+            <article class="slide4">
                 <img src="Bilder/Slide-Bilder/Group 17.png" alt="Zeichnung, Sequenzzeichnung, Storyboard, Videoprojekt"
                     width="625" role="presentation">
                 <h3>Projektarbeit: Videoprojekt, Thema: Prokrastination</h3>
@@ -258,7 +263,7 @@
             </article>
 
             <!-- Fünfter Slide -->
-            <article>
+            <article class="slide5">
                 <img src="Bilder/Slide-Bilder/Group 18.png" alt="Home-Screen Hotel Plot" width="625"
                     role="presentation">
                 <h3>Projektarbeit: Webprojekt, Thema: Erlebnisurlaub</h3>
@@ -300,7 +305,7 @@
             </article>
 
             <!-- Sechter Slide -->
-            <article>
+            <article class="slide6">
                 <img src="Bilder/Slide-Bilder/Group 19.png" alt="Smartphone, Screen, App" width="625"
                     role="presentation">
                 <h3>Projektarbeit: Mobile App, Thema: Lost in Transition</h3>
@@ -340,7 +345,7 @@
 
             <!--Sibter Slider-->
 
-            <article>
+            <article class="slide7">
                 <img src="Bilder/Slide-Bilder/Group 21.png" alt="Tunnelüberwachung, Home, App" width="625"
                     role="presentation">
                 <h3>Projektarbeit: Interaktionsgestaltung von Unternehmenssoftware, Thema: Tunnelüberwachung</h3>
@@ -403,11 +408,13 @@
         </div>
     </main>
     <footer>
-        <h2>Jemma Altrock</h2>
-        <a href="mailto:jemma.altrock@gmx.de">jemma.altrock@gmx.de</a>
-        <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a href="https://www.xing.com/profile/Jemma_Altrock2/web_profiles?expandNeffi=true">Xing</a> | <a href="sag_hallo.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
-            href="datenschutz.html">Datenschutz</a> </p>
-    </footer>
+        <footer>
+            <h3><span>J</span>emma <span>A</span>ltrock</h3>
+            <p> | <a href="https://www.linkedin.com/in/jemma-altrock-859285216/">LinkedIn</a> | <a
+                    href="https://www.xing.com/profile/Jemma_Altrock2/web_profiles?expandNeffi=true">Xing</a> | <a
+                    href="sag_hallo.html">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a
+                    href="datenschutz.html">Datenschutz</a> </p>
+        </footer>
 
 
 </body>
