@@ -34,120 +34,143 @@
     </header>
 
     <main>
+        <!-- Sichtfenster -->
+        <div class="cssSlider">
 
-        <div class="slider-container">
-            <legend>slides Auswahl</legend>
-            <input type="radio" id="slide1" name="slider" checked>
-            <input type="radio" id="slide2" name="slider">
-            <input type="radio" id="slide3" name="slider">
-            <input type="radio" id="slide4" name="slider">
-            <input type="radio" id="slide5" name="slider">
-            <input type="radio" id="slide6" name="slider">
-            <input type="radio" id="slide7" name="slider">
-        
+            <!-- die inputs um den Slider zu Steuern -->
+            <input type="radio" name="slider" id="slide01" checked="checked">
+            <input type="radio" name="slider" id="slide02">
+            <input type="radio" name="slider" id="slide03">
+            <input type="radio" name="slider" id="slide04">
 
-        <!-- slides Inhalte -->
-        <div class="slides">
-            <!-- Erster Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Rectangle 17.png" alt="Logo, nada, Unverpacktladen" width="625"
-                    role="presentation">
-                <div class="slide-text">
-                    <h1>PROJEKTARBEIT Konzeption Unverpacktladen</h1>
-                <p>Konzept und Design für einen neuen Unverpacktladen namens "nada." in Essen, der auf
-                    nachhaltiges
-                    Einkaufen ohne Verpackungsmüll abzielt.
-                </p>
-                </div>
-            </div>
+            <!-- Steuerung -->
+            <ul class="sliderControls">
+                <li><label for="slide01">1</label></li>
+                <li><label for="slide02">2</label></li>
+                <li><label for="slide03">3</label></li>
+                <li><label for="slide04">4</label></li>
+            </ul>
 
-            <!-- Zweiter Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 15.png" alt="Logo Optik Tack" width="625" role="presentation">
-                <div class="slide-text">
-                <h1>Projektarbeit Neukonzeption Optik Tack</h1>
-                <p>in Konzept zur Neupositionierung und Markenentwicklung des Optikergeschäfts Optik Tack in
-                    Aalen,
-                    einschließlich Situationsanalysen, Zielgruppenanalysen und Corporate Design.
-                </div>
-            </div>
+            <!-- die einzelnen Slides, als Liste  -->
+            <ul class="sliderElements">
+                <li>
+                    <figure>
+                        <img src="Bilder/Slide-Bilder/Group 15.png" alt="" height="400" width="1200">
+                        <figcaption>Optik Tack</figcaption>
+                        <div class="wrapper">
+                            <div class="container">
+                                <h3>Projektarbeit Neukonzeption Optik Tack</h3>
+                                <p>
+                                    Ein Konzept zur Neupositionierung und Markenentwicklung des Optikergeschäfts Optik
+                                    Tack in
+                                    Aalen, einschließlich Situationsanalysen, Zielgruppenanalysen und Corporate Design.
+                                </p>
+                                <h3>ZUSAMMENFASSUNG DES PROJEKTS</h3>
+                                <p>Das Projekt MG - 01 Optik Tack, zielt darauf ab, das mittelständische Optikergeschäft
+                                    Optik
+                                    Tack
+                                    in Aalen neu zu positionieren und gegenüber großen Ketten und lokalen Konkurrenten
+                                    wettbewerbsfähig zu machen. Der Fokus liegt auf einem neuen visuellen Konzept, das
+                                    die Marke
+                                    stärkt und eine klare Markenidentität schafft.
+                                </p>
+                                <a class="link" href="konzept_OptikTack.html" target="_blank">Hier die Gesamte Arbeit
+                                    Anschauen</a>
+                            </div>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Bilder/Slide-Bilder/Group 18.png" alt="" height="400" width="1200">
+                        <figcaption>Hotel Plot</figcaption>
+                        <div class="wrapper">
+                            <div class="container">
+                                <h3>Projektarbeit: Webprojekt, Thema: Erlebnisurlaub</h3>
+                                <p>
+                                    Konzeption einer Website für ein Erlebnishotel. Die Auswashl des Themas und des
+                                    Standortes
+                                    konnten eigenständig ausgewählt werden. Meine Idee war ein Kultur-Hotel in Weimar zu
+                                    konzipieren.
+                                </p>
+                                <h3>Konzept und Zielsetzung:</h3>
+                                <p>
+                                    Die Aufgabe war es eine Website für ein Hotel zu entwickeln. Das Hotel sollte ein
+                                    besonderes
+                                    Erlebnis für die Gäste erschaffen. Dabei habe ich mich für ein Kulturhotel in Weimar
+                                    entschoieden. Der Name Plot sollte aus dem Theater kommend symbolisch für den
+                                    Kontext zur
+                                    Literatur, Kunst und Theater in Weimar stehen. Auf den Spren von Goethe und
+                                    Schiller, aber
+                                    auch
+                                    die Bauhauskultur der Stadt sollte aufgegriffen werden. Die Zielgruppe ist eine
+                                    junge,
+                                    kunst-
+                                    und kulturinteressierte Gruppe von Menschen, die Freude daran haben den Charme der
+                                    Stadt zu
+                                    erleben und neu zu inszenieren und zu erfinden. Die Seite ist minimalistisch
+                                    gestaltet und
+                                    bietet ansprechende Akzente.
+                                </p>
+                                <a class="link" href="konzept_hotelwebsite.html" target="_blank">Hier die Gesamte Arbeit
+                                    Anschauen</a>
+                            </div>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Bilder/Slide-Bilder/Group 19.png" alt="" height="400" width="1200">
+                        <figcaption>Mobile-App</figcaption>
+                        <div class="wrapper">
+                            <div class="container">
+                                <h3>Projektarbeit: Mobile App, Thema: Lost in Transition</h3>
+                                <p>
+                                    Konzeption einer App für Menschen, die an fremden Orten unterwegs sind.
+                                </p>
+                                <h3>Konzept und Zielsetzung:</h3>
+                                <p> Die Aufgabe war es eine mobile App zu entwickeln. Dabei ging es darum sich als
+                                    Nutzender
+                                    besser zurecht zu finden in fremden Ländern oder Städten. Dabei habe ich den Fokus
+                                    auf das
+                                    Essen gesetzt.</p>
+                                <a class="link" href="mobile_app.html" target="_blank">Hier die Gesamte Arbeit
+                                    Anschauen</a>
+                            </div>
+                        </div>
 
-            <!-- Dritter Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 16.png" alt="Villa Italian - Screen einer Restaurant-Website"
-                    width="625" role="presentation">
-                <div class="slide-text">
-                <h3>Projektarbeit: Website-Konzept für „Villa Italia“</h3>
-                <p>Das Projektumfasst die Entwicklung einer modernen Website für das italienische Restaurant
-                    „Villa
-                    Italia“ in Essen-Bredeney. Ziel ist es, die gehobene italienische Küche online ansprechend
-                    zu
-                    präsentieren und eine jüngere Zielgruppe anzusprechen.</p>
-                </div> 
-            </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Bilder/Slide-Bilder/Group 21.png" alt="" height="400" width="1200">
+                        <figcaption>Projektarbeit: Tunnelüberwachungssystem</figcaption>
+                        <div class="wrapper">
+                            <div class="container">
+                                <h3>Projektarbeit: Interaktionsgestaltung von Unternehmenssoftware, Thema:
+                                    Tunnelüberwachung</h3>
+                                <p>
+                                    Entwicklung einer zentralen Software zur Überwachung und Steuerung eines
+                                    Autobahntunnel im Bundesland NRW.
+                                </p>
+                                <h3>Konzept und Zielsetzung:</h3>
+                                <p>
+                                    Nutzergruppen analysiert, Personas entwickelt und daraus die User Needs abgeleitet.
+                                    User Flows erstellt, Skizzen zur Visualisierung angefertigt und die Struktur mit
+                                    einer Sitemap definiert. Ein Moodboard diente zur Festlegung der Farbgebung, während
+                                    der Styleguide mit Gestaltungsrastern und einem einheitlichen Grundmaß für
+                                    Konsistenz im Design sorgt. So entstand eine durchdachte, nutzerfreundliche und
+                                    visuell ansprechende Gestaltung.
+                                </p>
+                                <a class="link" href="konzept_tunnelueberwachung.html" target="_blank">Hier die Gesamte
+                                    Arbeit Anschauen</a>
+                            </div>
+                        </div>
+                    </figure>
+                </li>
+            </ul>
 
-            <!-- Vierter Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 17.png" alt="Zeichnung, Sequenzzeichnung, Storyboard, Videoprojekt"
-                    width="625" role="presentation">
-                <div class="slide-text">
-                <h3>Projektarbeit: Videoprojekt, Thema: Prokrastination</h3>
-                <p>Das Videoprojekt umfasst die Entwicklung umfasst die Erstellung eines Storyboards zum
-                    ausgewählten
-                    Thema Prokrastination. Erstellung von Videomaterial, Schnitt und Musikauswahl. Zusätzlich wurde
-                    ein
-                    Plakat für ein figtives Kurzfilmtage-Festival erstellt.</p>
-                </div>
-            </div>
-
-            <!-- Fünfter Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 18.png" alt="Home-Screen Hotel Plot" width="625"
-                    role="presentation">
-                <div class="slide-text">
-                <h3>Projektarbeit: Webprojekt, Thema: Erlebnisurlaub</h3>
-                <p>Konzeption einer Website für ein Erlebnishotel. Die Auswashl des Themas und des Standortes
-                    konnten
-                    eigenständig ausgewählt werden. Meine Idee war ein Kultur-Hotel in Weimar zu konzipieren. Es
-                    sollte
-                    junge Menschen ansprechen und minimalistisch gestaltet sein.</p>
-                </div>
-            </div>
-
-            <!-- Sechter Slide -->
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 19.png" alt="Smartphone, Screen, App" width="625"
-                    role="presentation">
-                <div class="slide-text"></div> 
-                <h3>Projektarbeit: Mobile App, Thema: Lost in Transition</h3>
-                <p>Konzeption einer App für Menschen, die an fremden Orten unterwegs sind.</p>
-                </div> 
-            </div>
-
-            <!--Sibter slides-->
-
-            <div class="slide">
-                <img src="Bilder/Slide-Bilder/Group 21.png" alt="Tunnelüberwachung, Home, App" width="625"
-                    role="presentation">
-                <div class="slide-text">  
-                <h3>Projektarbeit: Interaktionsgestaltung von Unternehmenssoftware, Thema: Tunnelüberwachung</h3>
-                <p>Entwicklung einer zentralen Software zur Überwachung und Steuerung eines Autobahntunnel im
-                    Bundesland
-                    NRW.</p>
-                </div> 
-            </div>
-       </div>
-            <!-- Navigation für den slides -->
-            <div class="slider-nav">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-                <label for="slide6"></label>
-                <label for="slide7"></label>
-            </div>
-        </div> 
+        </div>
 
     </main>
     <footer>

@@ -34,8 +34,27 @@ h2 {
 h3 {
     font-size: 2rem;
     font-weight: normal;
-    text-transform: uppercase;
-    /* Alles in Großbuchstaben */
+    text-transform: uppercase; /* Alles in Großbuchstaben */
+    text-align: left;
+    justify-content: center;
+}
+p{
+    justify-content: center;
+}
+a.link{
+    text-align: left;
+    color: gray;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;  /* Zentriert den Container */
+}
+
+.container {
+    max-width: 600px;
+    text-align: left;  /* Text bleibt links ausgerichtet */
 }
 
 /* Allgemeine Stile für die Navbar */
@@ -160,98 +179,113 @@ h3 {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Slider-Stile */
-.slider-container {
-    position: relative;
-    width: 80vw;
-    max-width: 800px;
-    margin: 20px auto;
+/* Slider */
+.sliderElements,
+.sliderElements figure,
+.sliderControls {
+    margin: 0;
+}
+ 
+.sliderElements:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
     overflow: hidden;
-    border-radius: 10px;
 }
-
-.slides {
-    display: flex;
-    width: calc(100% * 7);
-    transition: transform 0.5s ease-in-out;
+ 
+.cssSlider {
+    overflow-x: hidden;
 }
-
-.slide {
-    width: 80vw;
-    flex-shrink: 0;
+ 
+.sliderElements {
+    list-style: none;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    height: 100%;
+    left: 0;
+    width: 400%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
 }
-
-.slide img {
-    width: 100%;
+ 
+.sliderElements > li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+ 
+#slide02:checked ~ .sliderElements {
+    left: -100%;
+}
+ 
+#slide03:checked ~ .sliderElements {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements {
+    left: -300%;
+}
+ 
+/* Bildunterschrift auf dem Bild positionieren */
+.sliderElements figcaption {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: .4em;
+    background: rgba(0,0,0,.5);
+}
+ 
+/* Bilder responsive */
+.sliderElements img {
+    width: 50%;
     height: auto;
-    border-radius: 10px 10px 0 0;
 }
-
-.slide-text {
-    background: white;
-    padding: 15px;
-    width: 100%;
-    box-sizing: border-box;
+ 
+ 
+/* inputs aus dem Blickfeld schieben */
+.cssSlider input {
+    position: absolute;
+    left: -99999px;
 }
-
-/* Navigation */
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+ 
+/* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
+.sliderControls {
+    text-align: center;
 }
-
-.slider-nav label {
+ 
+/* Controls nebeneinander bringen */
+.sliderControls li {
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    background: gray;
+}
+ 
+/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+.sliderControls label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
     border-radius: 50%;
-    margin: 5px;
+    display: block;
     cursor: pointer;
-    transition: background 0.3s;
+    background: #000000;
+    color: #000000;
+    margin: 4rem;
 }
-
-input[name="slider"]:checked+.slider-nav label {
-    background: black;
-}
-
-#slide1:checked~.slides {
-    transform: translateX(0%);
-}
-
-#slide2:checked~.slides {
-    transform: translateX(-100%);
-}
-
-#slide3:checked~.slides {
-    transform: translateX(-200%);
-}
-
-#slide4:checked~.slides {
-    transform: translateX(-300%);
-}
-
-#slide5:checked~.slides {
-    transform: translateX(-400%);
-}
-
-#slide6:checked~.slides {
-    transform: translateX(-500%);
-}
-
-#slide7:checked~.slides {
-    transform: translateX(-600%);
+ 
+/* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
+.sliderControls label:hover,
+#slide01:checked ~ .sliderControls label[for="slide01"],
+#slide02:checked ~ .sliderControls label[for="slide02"],
+#slide03:checked ~ .sliderControls label[for="slide03"] {
+    background: #ddd;
+    color: #ddd;
 }
 
 /* Footer */
