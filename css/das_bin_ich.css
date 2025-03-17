@@ -260,3 +260,149 @@ footer a {
     color: black;
     margin: 0 1rem;
 }
+
+/* Anpassungen für Tablets (bis 1024px) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 10rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .Logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Eine Spalte auf Tablets */
+        gap: 1.5rem;
+    }
+
+    .text, .text-grey {
+        max-width: 100%; /* Volle Breite */
+    }
+}
+
+/* Anpassungen für Smartphones (bis 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 6rem;
+        bottom: 0.5rem; /* Näher an den Rand */
+        right: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .Logo {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .burger span {
+        width: 1.5rem;
+    }
+
+    .container {
+        max-width: 100vw; 
+        width: 100%; /* Volle Breite bis zur max-width */
+        margin: 0 auto; /* Zentriert das Grid */
+        padding: 0 2rem; /* Sicherheitsabstand links & rechts */
+        overflow: hidden;
+        position: relataive;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        max-width: auto; 
+        width: 100%; /* Flexible Anpassung */
+        margin: 0 auto; /* Zentriert den Inhalt */
+        box-sizing: border-box;
+        overflow: hidden; /* Falls ein Element herausragt, wird es abgeschnitten */
+    }
+
+    .text, .text-grey {
+        padding: 1rem; /* Weniger Padding */
+        width: 100%; /* Füllt die gesamte Breite des Containers */
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    h1.zitat {
+        text-align: center;
+        padding: 2rem 0;
+        /* Abstand nach oben und unten */
+        position: relative;
+    }
+
+    /* Footer-Icons untereinander */
+    .footer-icons {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .footer-icons a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Anpassungen für sehr kleine Geräte (bis 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .Logo {
+        font-size: 0.9rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .burger span {
+        width: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem;
+        text-align: center; /* Footer zentrieren */
+    }
+
+    .footer-icons {
+        align-items: center;
+    }
+}
