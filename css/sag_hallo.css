@@ -409,6 +409,17 @@ margin: 0 1rem;
   .formular {
     order: 1;
   }
+  .footer-icons {
+    display: flex;
+    flex-direction: column; /* Untereinander anordnen */
+    align-items: flex-end;
+    gap: 10px; /* Abstand zwischen den Elementen */
+}
+
+.footer-icons a {
+    color: black;
+    text-decoration: none;
+}
 }
 
 /* Anpassungen für sehr kleine Geräte (bis 480px) */
@@ -453,4 +464,9 @@ margin: 0 1rem;
   .formular {
     order: 1;
   }
+  footer{
+    flex-direction: column; /* Jetzt untereinander */
+    align-items: flex-end; /* Rechtsbündig */
+    gap: 10px;
+}
 }

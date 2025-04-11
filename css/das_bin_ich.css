@@ -255,6 +255,27 @@ h3 span {
 font-weight: bold;
 }
 
+/* Footer */
+footer {
+    background: white;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column; /* Elemente untereinander anordnen */
+    align-items: flex-end;
+    font-size: 12px;
+    position: relative;
+}
+
+footer h3 {
+color: grey;
+text-transform: uppercase;
+font-weight: normal;
+}
+
+h3 span {
+font-weight: bold;
+}
+
 footer a {
 text-decoration: none;
 color: black;
@@ -348,15 +369,16 @@ margin: 0 1rem;
         border-radius: 10px;
     }
   
-    /* Footer-Icons untereinander */
     .footer-icons {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Untereinander anordnen */
         align-items: flex-end;
-        gap: 10px;
+        gap: 10px; /* Abstand zwischen den Elementen */
     }
-
+    
     .footer-icons a {
-        font-size: 1.5rem;
+        color: black;
+        text-decoration: none;
     }
 }
 
@@ -396,13 +418,9 @@ margin: 0 1rem;
         overflow: hidden;
     }
 
-    /* Footer */
-    footer {
-        padding: 1rem;
-        text-align: center; /* Footer zentrieren */
-    }
-
-    .footer-icons {
-        align-items: center;
+    footer{
+        flex-direction: column; /* Jetzt untereinander */
+        align-items: flex-end; /* Rechtsbündig */
+        gap: 10px;
     }
 }
