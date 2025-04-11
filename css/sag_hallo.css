@@ -185,268 +185,272 @@ h3 {
 
 /* Inhalte */
 
-.text {
-    grid-template-columns: auto;
-    max-width: 50rem;
-    padding: 2rem;
-    -webkit-hyphens: auto; 
-	hyphens: auto; 
+/* Grid-Layout */
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+
+
+/* Bild links */
+.image-section {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
-img.full-width {
-    width: calc(100% + 4rem);
-    /* 4rem extra, damit es über den Spaltenrand hinausgeht */
-    max-width: none;
-    margin-left: -2rem;
-    /* Negativer Margin, um das Bild über den Rand hinaus zu verschieben */
-    margin-right: -2rem;
-} 
-
-p.bold {
-    font-style: bold;
-    text-transform: uppercase;
-    font-size: 3rem;
-    margin: 0;
+.image-section img.full-width {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+/* Formular rechts */
 .formular {
-    grid-template-columns: auto;
-    max-width: 50rem;
-    padding: 2rem;
-    background-color: #808080;
-    color: #ffffff;
+  background-color: grey;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-img {
-    height: auto;
-    display: block;
-    position: relative;
+/* Texte im Formular */
+.formular p.bold {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
+
+.formular p {
+  margin-bottom: 2rem;
 }
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
+
+/* Formularfelder */
+form label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
-textarea {
-    height: 150px;
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
-button {
-    background: none;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #ffffff;
+
+/* Textarea Styling */
+form textarea {
+  resize: vertical;
+  height: 100px;
 }
-button::after {
-    content: "→";
+
+/* Button */
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Fehlermeldungen */
 .error-message {
-    color: red;
-    font-size: 12px;
-    display: none;
+  font-size: 0.9rem;
+  color: red;
+}
 }
 /* Footer */
 footer {
-    background: white;
-    padding: 1rem 3rem;
-    display: flex;
-    flex-direction: column;
-    /* Elemente untereinander anordnen */
-    align-items: flex-end;
-    font-size: 12px;
-    position: relative;
+  background: white;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column; /* Elemente untereinander anordnen */
+  align-items: flex-end;
+  font-size: 12px;
+  position: relative;
 }
 
 footer h3 {
-    color: grey;
-    text-transform: uppercase;
-    font-weight: normal;
+color: grey;
+text-transform: uppercase;
+font-weight: normal;
 }
 
 h3 span {
-    font-weight: bold;
+font-weight: bold;
 }
 
 footer a {
-    text-decoration: none;
-    color: black;
-    margin: 0 1rem;
+text-decoration: none;
+color: black;
+margin: 0 1rem;
 }
-
 /* Anpassungen für Tablets (bis 1024px) */
 @media (max-width: 1024px) {
-    h1 {
-        font-size: 4rem;
-    }
+  #container {
+    grid-template-columns: 1fr;
+  }
 
-    h2 {
-        font-size: 10rem;
-    }
+  .formular {
+    order: 1;
+  }
 
-    h3 {
-        font-size: 1.5rem;
-    }
+  .image-section {
+    order: 2;
+  }
 
-    .Logo {
-        font-size: 1.2rem;
-    }
+  h1 {
+    font-size: 4rem;
+  }
 
-    .nav-links a {
-        font-size: 1rem;
-    }
+  h2 {
+    font-size: 10rem;
+  }
 
-    main {
-        grid-template-columns: 1fr; /* Eine Spalte auf Tablets */
-        gap: 1.5rem;
-    }
+  h3 {
+    font-size: 1.5rem;
+  }
 
-    .text, .text-grey {
-        max-width: 100%; /* Volle Breite */
-    }
+  .Logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .text, .text-grey {
+    max-width: 100%;
+  }
 }
 
 /* Anpassungen für Smartphones (bis 768px) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 
-    h2 {
-        font-size: 6rem;
-        bottom: 0.5rem; /* Näher an den Rand */
-        right: 1rem;
-    }
+  h2 {
+    font-size: 6rem;
+    bottom: 0.5rem;
+    right: 1rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    .Logo {
-        font-size: 1rem;
-    }
+  .Logo {
+    font-size: 1rem;
+  }
 
-    .nav-links a {
-        font-size: 0.9rem;
-    }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
 
-    .burger span {
-        width: 1.5rem;
-    }
+  .burger span {
+    width: 1.5rem;
+  }
 
-    .container {
-        max-width: 100vw; 
-        width: 100%; /* Volle Breite bis zur max-width */
-        margin: 0 auto; /* Zentriert das Grid */
-        padding: 0 2rem; /* Sicherheitsabstand links & rechts */
-        overflow: hidden;
-        position: relataive;
-    }
-    
-    main {
-        display: grid;
-        grid-template-columns: 1fr; 
-        gap: 2rem;
-        max-width: auto; 
-        width: 100%; /* Flexible Anpassung */
-        margin: 0 auto; /* Zentriert den Inhalt */
-        box-sizing: border-box;
-        overflow: hidden; /* Falls ein Element herausragt, wird es abgeschnitten */
-    }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    .text, .text-grey {
-        padding: 1rem; /* Weniger Padding */
-        width: 100%; /* Füllt die gesamte Breite des Containers */
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        white-space: normal;
-    }
+  .text, .text-grey {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
-    h1.zitat {
-        text-align: center;
-        padding: 2rem 0;
-        /* Abstand nach oben und unten */
-        position: relative;
-    }
+  h1.zitat {
+    text-align: center;
+    padding: 2rem 0;
+  }
 
-    /* Footer-Icons untereinander */
-    .footer-icons {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-    }
+  .footer-icons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
 
-    .footer-icons a {
-        font-size: 1.5rem;
-    }
+  .footer-icons a {
+    font-size: 1.5rem;
+  }
 
-   .full-widthh {
-        order: 2;
-      }
-      
-    .formular {
-        order: 1;
-      }
+  .full-widthh {
+    order: 2;
+  }
 
+  .formular {
+    order: 1;
+  }
 }
 
 /* Anpassungen für sehr kleine Geräte (bis 480px) */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    h2 {
-        font-size: 4rem;
-    }
+  h2 {
+    font-size: 4rem;
+  }
 
-    h3 {
-        font-size: 1rem;
-    }
+  h3 {
+    font-size: 1rem;
+  }
 
-    .Logo {
-        font-size: 0.9rem;
-    }
+  .Logo {
+    font-size: 0.9rem;
+  }
 
-    .nav-links a {
-        font-size: 0.8rem;
-    }
+  .nav-links a {
+    font-size: 0.8rem;
+  }
 
-    .burger span {
-        width: 1.2rem;
-    }
+  .burger span {
+    width: 1.2rem;
+  }
 
-    /* Footer */
-    footer {
-        padding: 1rem;
-        text-align: center; /* Footer zentrieren */
-    }
+  footer {
+    padding: 1rem;
+    text-align: center;
+  }
 
-    .footer-icons {
-        align-items: center;
-    }
+  .footer-icons {
+    align-items: center;
+  }
 
-    .full-widthh {
-        order: 2;
-      }
-      
-    .formular {
-        order: 1;
-      }
-    
+  .full-widthh {
+    order: 2;
+  }
+
+  .formular {
+    order: 1;
+  }
 }

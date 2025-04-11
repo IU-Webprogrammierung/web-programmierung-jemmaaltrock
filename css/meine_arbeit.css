@@ -317,27 +317,26 @@ footer {
     background: white;
     padding: 1rem 3rem;
     display: flex;
-    flex-direction: column;
-    /* Elemente untereinander anordnen */
+    flex-direction: column; /* Elemente untereinander anordnen */
     align-items: flex-end;
     font-size: 12px;
     position: relative;
 }
 
 footer h3 {
-    color: grey;
-    text-transform: uppercase;
-    font-weight: normal;
+color: grey;
+text-transform: uppercase;
+font-weight: normal;
 }
 
 h3 span {
-    font-weight: bold;
+font-weight: bold;
 }
 
 footer a {
-    text-decoration: none;
-    color: black;
-    margin: 0 1rem;
+text-decoration: none;
+color: black;
+margin: 0 1rem;
 }
 
 
