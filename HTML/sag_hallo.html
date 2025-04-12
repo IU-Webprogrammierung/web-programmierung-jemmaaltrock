@@ -10,68 +10,66 @@
 <body>
     <header>
         <div class="menu">
-        <nav class="navbar" aria-label="Hauptnavigation">
-            <div class="Logo">SAG HALLO</div>
+            <nav class="navbar" aria-label="Hauptnavigation">
+                <div class="Logo">SAG HALLO</div>
 
-            <!-- Checkbox als Toggle für das Menü -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+                <!-- Checkbox als Toggle für das Menü -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-            <!-- Navigationslinks -->
-            <ul class="nav-links">
-                <li><a href="../index.html">JA</a></li>
-                <li><a href="das_bin_ich.html">das bin ich!</a></li>
-                <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
-                <li><a href="sag_hallo.html" aria-current="page">sag Hallo!</a></li>
-            </ul>
-        </nav>
-    </div>
+                <!-- Navigationslinks -->
+                <ul class="nav-links">
+                    <li><a href="../index.html">JA</a></li>
+                    <li><a href="das_bin_ich.html">das bin ich!</a></li>
+                    <li><a href="meine_arbeit.html">meine Arbeit!</a></li>
+                    <li><a href="sag_hallo.html" aria-current="page">sag Hallo!</a></li>
+                </ul>
+            </nav>
+        </div>
         <h1>JA Sag Hallo!</h1>
     </header>
     <div id="container">
-            <div class="image-section"><img class="full-width" src="Bilder/Image 6.png" alt="Schattenspiel einer Monstera-Pflanze auf einer Wand" role="presentation">
-            </div>    
-            <div class="formular">
-                <p class="bold">gemeinsam wird's episch!</p>
-                <p>Dann lass uns loslegen – ich freu mich auf deine Nachricht.</p>
-                <form>
-                    <label for="vorname">
-                        Vorname
-                        <input name="vorname" id="vorname" maxlength="30" required aria-required="true">
-                    </label>
-                    <span id="error-vorname" class="error-message" aria-live="polite"
-                        style="display: none; color: red;">
-                        Bitte Vorname eingeben.
-                    </span>
+        <div class="image-section"><img class="full-width" src="Bilder/Image 6.png"
+                alt="Schattenspiel einer Monstera-Pflanze auf einer Wand" role="presentation">
+        </div>
+        <div class="formular">
+            <p class="bold">gemeinsam wird's episch!</p>
+            <p>Dann lass uns loslegen – ich freu mich auf deine Nachricht.</p>
+            <form>
+                <label for="vorname">
+                    Vorname
+                    <input name="vorname" id="vorname" maxlength="30" required aria-required="true">
+                </label>
+                <span id="error-vorname" class="error-message" aria-live="polite" style="display: none; color: red;">
+                    Bitte Vorname eingeben.
+                </span>
 
-                    <label for="nachname">Nachname
-                        <input name="nachname" id="nachname" maxlength="40" required aria-required="true">
-                    </label>
-                    <span id="error-nachname" class="error-message" aria-live="polite"
-                        style="display: none; color: red;">
-                        Bitte Nachname eingeben.
-                    </span>
-                    <label for="e-mail">E-Mail
-                        <input name="e-mail" id="e-mail" maxlength="40" required aria-required="true">
-                    </label>
-                    <span id="error-e-mail" class="error-message" aria-live="polite" style="display: none; color: red;">
-                        Bitte E-Mail eingeben.
-                    </span>
-                    <label for="nachricht">Deine Nachricht</label>
-                    <textarea id="nachricht" name="nachricht"></textarea>
-                    <span id="error-nachricht" class="error-message" aria-live="polite"
-                        style="display: none; color: red;">
-                        Bitte eine Nachricht eingeben.
-                    </span>
+                <label for="nachname">Nachname
+                    <input name="nachname" id="nachname" maxlength="40" required aria-required="true">
+                </label>
+                <span id="error-nachname" class="error-message" aria-live="polite" style="display: none; color: red;">
+                    Bitte Nachname eingeben.
+                </span>
+                <label for="e-mail">E-Mail
+                    <input name="e-mail" id="e-mail" maxlength="40" required aria-required="true">
+                </label>
+                <span id="error-e-mail" class="error-message" aria-live="polite" style="display: none; color: red;">
+                    Bitte E-Mail eingeben.
+                </span>
+                <label for="nachricht">Deine Nachricht</label>
+                <textarea id="nachricht" name="nachricht"></textarea>
+                <span id="error-nachricht" class="error-message" aria-live="polite" style="display: none; color: red;">
+                    Bitte eine Nachricht eingeben.
+                </span>
 
-                    <button type="submit">Senden</button>
+                <button type="submit">Senden</button>
 
-                </form>
-            </div>
+            </form>
+        </div>
     </div>
     <footer>
         <h3><span>J</span>emma <span>A</span>ltrock</h3>
